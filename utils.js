@@ -20,29 +20,32 @@ function createButtonDel(callback) {
     buttonDel.style.marginLeft = '5px';
     buttonDel.addEventListener('click', function ({target}) {
         target.parentElement.remove();
-        if(typeof callback === 'function') {
+        if (typeof callback === 'function') {
             callback();
         }
     });
     return buttonDel;
 }
+
 function printPerson(text, callback) {
-    const person = createInfoElement(text,'p')
+    const person = createInfoElement(text, 'p')
     personList.append(person);
     person.append(createButtonDel(callback));
 }
+
 function printStats(text) {
     const statistics = document.createElement('div');
     text.forEach(line => {
-        const p = createInfoElement(line,'p');
+        const p = createInfoElement(line, 'p');
         statistics.append(p);
     })
     if (stats.children.length === 1) {
-    stats.append(statistics)
+        stats.append(statistics)
     } else {
         stats.replaceChild(statistics, stats.children[1]);
     }
 }
+
 function checkInputs(personId, firstName, lastName, birthDate, salary) {
     if (isNaN(personId.value) || personId.value === "" || personId.value < 0) {
         alert('Please enter a valid ID (Numbers from 0)')

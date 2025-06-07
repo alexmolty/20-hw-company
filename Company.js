@@ -27,7 +27,7 @@ class Company {
         return this.employees.length;
     }
 
-    minAge =  () => {
+    minAge = () => {
         return this.size === 0 ? 0 : Math.min(...this._employees.map((employee) => employee.age));
     }
 
@@ -36,7 +36,7 @@ class Company {
     }
 
     averageAge = () => {
-        const sumAges = this._employees.reduce((sum,employee) => sum + employee.age, 0);
+        const sumAges = this._employees.reduce((sum, employee) => sum + employee.age, 0);
         return this.size === 0 ? 0 : sumAges / this.size;
     }
 
