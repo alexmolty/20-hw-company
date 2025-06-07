@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Company</title>
-    <script src="./utils.js" defer></script>
-    <script src="./Person.js" defer></script>
-    <script src="./Employee.js" defer></script>
-    <script src="./Company.js" defer></script>
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/utils.js" defer></script>
+    <script src="scripts/Person.js" defer></script>
+    <script src="scripts/Employee.js" defer></script>
+    <script src="scripts/Company.js" defer></script>
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
-<div>
+<div class="form">
     <label>ID:
-        <input id="personId" type="text">
+        <input id="personId" type="text" placeholder="12345678">
     </label>
     <label>First Name:
-        <input id="firstName" type="text">
+        <input id="firstName" type="text" placeholder="John">
     </label>
     <label>Last Name:
-        <input id="lastName" type="text">
+        <input id="lastName" type="text" placeholder="Doe">
     </label>
     <label>Birthdate:
-        <input id="birthDate" type="date" min="1900-01-01" max="2025-01-01">
+        <input id="birthDate" type="date" min="1900-01-01">
     </label>
     <label>Salary:
-        <input id="salary" type="number">
+        <input id="salary" type="number" placeholder="10000">
     </label>
     <button id="addPerson">Add person</button>
 </div>
-<div>
+<div class="persons">
     <h2>Persons</h2>
     <ol id="personList"></ol>
 </div>

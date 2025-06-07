@@ -41,6 +41,6 @@ class Person {
     }
 
     get personInfo() {
-        return `${this.fullName()}. Age: ${this.age}.`
+        return `${this.fullName()}. ID: ${this.id}. Age: ${this.age}.`
     }
 }
